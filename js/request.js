@@ -1,3 +1,5 @@
+var currencyConverter = new CurrencyConverter()
+
 var request = new XMLHttpRequest()      
 
 request.open('GET', 'http://api.fixer.io/latest?base=GBP')
@@ -9,7 +11,11 @@ request.onreadystatechange = function () {
 
         var rates = responseJSON.rates
 
-        console.log(rates)
+        currencyConverter.setRates(rates)
+
+        for (var rate in rates) {
+        $('#rates').append('<li><strong>' + rate + ':</strong> ' + rates[rate] + '</li>')    
+        }
     }
 }
 
