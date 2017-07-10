@@ -18,4 +18,5 @@ CurrencyConverter.prototype = {
         return (toRate * amount).toFixed(2)
     }
 }
+//Final Edit
 
