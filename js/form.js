@@ -9,7 +9,9 @@ $(document).ready(function() {
 
         var convertedAmount = currencyConverter.convertTo(currency, amount)
 
-        document.write('<h3>' + amount + ' GBP in ' + currency + ' is ' + convertedAmount + '</h3>')
+        $( ".show-currency" ).html('<h3>' + amount + ' GBP in ' + currency + ' is ' + convertedAmount + '</h3>');
+
+       
 
     })
 })
